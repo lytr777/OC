@@ -3,6 +3,7 @@
 #include <netinet/in.h>
 #include <string>
 #include <deque>
+#include <sys/epoll.h>
 #include <memory.h>
 #include <memory>
 #include "read_writer.h"

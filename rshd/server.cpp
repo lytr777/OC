@@ -21,9 +21,9 @@ int server::start() {
         return -1;
     }
 
-    printf("Waiting on port: %d\n", port);
+    //printf("Waiting on port: %d\n", port);
 
-    ptr = std::make_shared<read_writer>(45, fd);
-    printf("server created : %d\n", ptr->fd);
+    ptr = std::make_shared<read_writer>(45, fd, 0);
+    //printf("server created : %d\n", ptr->fd);
     return 0;
 }

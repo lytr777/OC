@@ -3,6 +3,7 @@
 #include <termios.h>
 #include <sys/ioctl.h>
 #include <vector>
+#include <sys/epoll.h>
 #include "read_writer.h"
 #include "client.h"
 
@@ -13,8 +14,9 @@
 class terminal {
 public:
     std::shared_ptr<read_writer> ptr;
+    uint32_t events;
 
-    terminal();
+    terminal(uint32_t events);
 
     void set_pair(read_writer *pair);
 

@@ -12,8 +12,9 @@
 class client {
 public:
     std::shared_ptr<read_writer> ptr;
+    uint32_t events;
 
-    client(int socket);
+    client(int socket, uint32_t events);
 
     void set_pair(read_writer *pair);
 };
